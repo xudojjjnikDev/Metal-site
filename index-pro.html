@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>МеталлПро: металлоконструкции под ключ от проекта до монтажа</title>
+<meta name="description" content="Проектирование, изготовление и монтаж ангаров, каркасов зданий, ферм, лестниц и ограждений. Расчёт стоимости по чертежу.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style-pro.css">
+</head>
+<body>
+<header class="top"><div class="c">
+  <a class="logo" href="#">МеталлПро</a>
+  <nav aria-label="Разделы"><a href="#services">Услуги</a><a href="#catalog">Каталог</a><a href="#portfolio">Объекты</a><a href="#production">Производство</a></nav>
+  <a class="tel" href="tel:+70000000000">+7 (000) 000-00-00</a>
+  <a class="btn sm" href="#request">Заявка</a>
+</div></header>
+
+<main>
+<!-- 1. HERO -->
+<section class="hero"><div class="c">
+  <h1>Металлоконструкции под ключ: от проекта до монтажа</h1>
+  <p>Проектируем, изготавливаем на собственном производстве и монтируем. Один подрядчик на весь объект, сроки и цена в договоре.</p>
+  <div class="row"><a class="btn" href="#request">Рассчитать стоимость</a><a class="btn ghost" href="#portfolio">Смотреть объекты</a></div>
+</div></section>
+
+<!-- 2. ЦИФРЫ (примерные, замените на реальные) -->
+<section class="sec"><div class="c stats" data-reveal>
+  <div class="stat"><b>12</b><span>лет на рынке</span></div>
+  <div class="stat"><b>3 000 т</b><span>металла в год</span></div>
+  <div class="stat"><b>480</b><span>реализованных объектов</span></div>
+  <div class="stat"><b>5 лет</b><span>гарантии на конструкции</span></div>
+</div></section>
+
+<!-- 3. УСЛУГИ -->
+<section class="sec paper" id="services"><div class="c">
+  <h2 data-reveal>Услуги</h2>
+  <p class="lead" data-reveal>Весь цикл в одной компании: нет передачи ответственности между подрядчиками.</p>
+  <div class="grid c4">
+    <article class="card" data-reveal><div class="ph">Фото</div><div class="b">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><path d="M6 42L8 32 32 8l8 8L16 40zM28 12l8 8"/></svg>
+      <h3>Проектирование</h3><p>КМ и КМД, расчёт нагрузок, привязка к вашему проекту.</p></div></article>
+    <article class="card" data-reveal><div class="ph">Фото</div><div class="b">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><path d="M4 42V20l12 7V20l12 7V20l12 7V8h4v34z"/></svg>
+      <h3>Изготовление</h3><p>Резка, сварка, сборка в цехе с контролем качества на каждом этапе.</p></div></article>
+    <article class="card" data-reveal><div class="ph">Фото</div><div class="b">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><path d="M8 42h32M14 42V16h20v26M14 16L24 6l10 10M20 26h8"/></svg>
+      <h3>Монтаж</h3><p>Собственные бригады и техника, работа по графику и ППР.</p></div></article>
+    <article class="card" data-reveal><div class="ph">Фото</div><div class="b">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><path d="M24 4l16 6v12c0 10-7 18-16 22C15 40 8 32 8 22V10z"/></svg>
+      <h3>Антикоррозийная защита</h3><p>Дробеструй, грунтование, окраска и цинкование под условия эксплуатации.</p></div></article>
+  </div>
+</div></section>
+
+<!-- 4. КАТАЛОГ -->
+<section class="sec" id="catalog"><div class="c">
+  <h2 data-reveal>Каталог изделий</h2>
+  <p class="lead" data-reveal>Типовые решения и изделия по вашему чертежу. Выберите тип.</p>
+  <div class="filters" id="filters" role="group" aria-label="Фильтр по типу изделий"></div>
+  <div class="grid c4" id="catalog-list" aria-live="polite"></div>
+</div></section>
+
+<!-- 5. ЭТАПЫ -->
+<section class="sec dark"><div class="c">
+  <h2 data-reveal>Как мы работаем</h2>
+  <p class="lead" data-reveal>Шесть шагов от заявки до сдачи объекта.</p>
+  <ol class="steps">
+    <li data-reveal><h3>Заявка и расчёт</h3><p>Изучаем чертежи или ТЗ, считаем стоимость и сроки.</p></li>
+    <li data-reveal><h3>Проектирование</h3><p>Разрабатываем КМ и КМД, согласуем с вами.</p></li>
+    <li data-reveal><h3>Договор</h3><p>Фиксируем цену, график и гарантию.</p></li>
+    <li data-reveal><h3>Изготовление</h3><p>Производим конструкции в цехе, контролируем качество.</p></li>
+    <li data-reveal><h3>Доставка и монтаж</h3><p>Привозим на объект и монтируем по графику.</p></li>
+    <li data-reveal><h3>Сдача и гарантия</h3><p>Передаём исполнительную документацию, сопровождаем 5 лет.</p></li>
+  </ol>
+</div></section>
+
+<!-- 6. ПОРТФОЛИО (данные примерные) -->
+<section class="sec paper" id="portfolio"><div class="c">
+  <h2 data-reveal>Реализованные объекты</h2>
+  <p class="lead" data-reveal>Площадь, масса металла и срок выполнения по каждому проекту.</p>
+  <div class="grid c3">
+    <article class="card" data-reveal><div class="ph">Фото объекта</div><div class="b"><h3>Производственный ангар</h3><p>Каркас с кровельными фермами, пролёт 24 м.</p>
+      <dl><div><dt>Площадь</dt><dd>2 400 м²</dd></div><div><dt>Масса</dt><dd>180 т</dd></div><div><dt>Срок</dt><dd>3 мес.</dd></div></dl></div></article>
+    <article class="card" data-reveal><div class="ph">Фото объекта</div><div class="b"><h3>Складской комплекс</h3><p>Каркас здания, шаг колонн 12 м.</p>
+      <dl><div><dt>Площадь</dt><dd>6 000 м²</dd></div><div><dt>Масса</dt><dd>420 т</dd></div><div><dt>Срок</dt><dd>5 мес.</dd></div></dl></div></article>
+    <article class="card" data-reveal><div class="ph">Фото объекта</div><div class="b"><h3>Торговый центр</h3><p>Многоэтажный каркас, лестницы и ограждения.</p>
+      <dl><div><dt>Площадь</dt><dd>3 800 м²</dd></div><div><dt>Масса</dt><dd>260 т</dd></div><div><dt>Срок</dt><dd>4 мес.</dd></div></dl></div></article>
+  </div>
+</div></section>
+
+<!-- 7. ПРОИЗВОДСТВО -->
+<section class="sec" id="production"><div class="c split">
+  <div data-reveal>
+    <h2>Собственное производство</h2>
+    <p class="lead">Цех с сварочными линиями, плазменной резкой и окрасочной камерой. Контролируем качество, а не перепродаём чужое.</p>
+    <ul class="certs">
+      <li><b>ГОСТ 23118-2019</b><span>Конструкции стальные строительные, общие технические условия</span></li>
+      <li><b>Допуск СРО</b><span>На проектирование и строительство (номер и дату вставьте)</span></li>
+      <li><b>Сертификаты и протоколы</b><span>На металл, сварщиков и покрытия</span></li>
+    </ul>
+  </div>
+  <div class="g2" data-reveal><div class="ph">Оборудование</div><div class="ph">Цех</div><div class="ph">Сварка</div><div class="ph">Покраска</div></div>
+</div></section>
+
+<!-- 8. ОТЗЫВЫ И КЛИЕНТЫ (примерные тексты) -->
+<section class="sec paper"><div class="c">
+  <h2 data-reveal>Отзывы клиентов</h2>
+  <div class="grid c3" style="margin-top:32px">
+    <blockquote data-reveal><p>Смонтировали ангар в срок, к документации вопросов не было.</p><cite>Иван П., директор по строительству</cite></blockquote>
+    <blockquote data-reveal><p>Просчитали нестандартную ферму по нашему чертежу быстрее остальных.</p><cite>Сергей К., главный инженер</cite></blockquote>
+    <blockquote data-reveal><p>Один подрядчик на проект и монтаж, это сильно упростило работу.</p><cite>Алексей М., девелопер</cite></blockquote>
+  </div>
+  <div class="logos" aria-label="Наши клиенты"><div>Логотип</div><div>Логотип</div><div>Логотип</div><div>Логотип</div><div>Логотип</div><div>Логотип</div></div>
+</div></section>
+
+<!-- 9. ЗАЯВКА -->
+<section class="sec dark" id="request"><div class="c split">
+  <div data-reveal>
+    <h2>Рассчитаем стоимость по вашему чертежу</h2>
+    <p class="lead">Загрузите чертёж или опишите задачу. Инженер посчитает смету и свяжется с вами.</p>
+  </div>
+  <form class="panel" id="request-form" novalidate data-reveal>
+    <label>Имя <input type="text" name="name" required autocomplete="name"></label>
+    <label>Телефон <input type="tel" name="phone" required autocomplete="tel" placeholder="+7 (___) ___-__-__"></label>
+    <label>Чертёж или ТЗ <span class="hint">PDF, DWG, DXF, JPG, ZIP</span>
+      <input type="file" name="drawing" accept=".pdf,.dwg,.dxf,.jpg,.jpeg,.png,.zip"></label>
+    <label>Комментарий <textarea name="comment" rows="4" placeholder="Тип изделия, размеры, сроки, город"></textarea></label>
+    <label class="chk"><input type="checkbox" name="consent"><span>Согласен на обработку персональных данных (<a href="#">политика конфиденциальности</a>)</span></label>
+    <button class="btn" type="submit">Рассчитать стоимость</button>
+    <p class="result" id="request-result" role="status"></p>
+  </form>
+</div></section>
+</main>
+
+<!-- 10. ФУТЕР -->
+<footer class="foot"><div class="c">
+  <div class="grid">
+    <div><h3>Контакты</h3><p><a href="tel:+70000000000">+7 (000) 000-00-00</a><br><a href="mailto:info@example.ru">info@example.ru</a><br>г. Город, ул. Заводская, 1<br>Пн–Пт, 9:00–18:00</p></div>
+    <div><h3>Реквизиты</h3><p>ООО «МеталлПро»<br>ИНН 0000000000<br>ОГРН 0000000000000</p></div>
+    <div><h3>Мессенджеры</h3><p><a href="https://t.me/">Telegram</a><br><a href="https://wa.me/">WhatsApp</a></p></div>
+    <!-- Карта: вставьте код встраивания Яндекс.Карт или Google Maps вместо этого блока -->
+    <div class="ph">Карта</div>
+  </div>
+  <p class="copy">© МеталлПро. Все права защищены.</p>
+</div></footer>
+
+<script src="script-pro.js"></script>
+</body>
+</html>

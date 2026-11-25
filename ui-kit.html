@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UI-кит МеталлПро</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style-pro.css">
+<style>
+.k{padding:48px 0;border-bottom:1px solid var(--line)}.k h2{font-size:1.8rem}
+.sw{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}@media(min-width:640px){.sw{grid-template-columns:repeat(4,1fr)}}
+.sw div{height:110px;border-radius:4px;padding:12px;font-size:.85rem;display:flex;align-items:flex-end;border:1px solid var(--line)}
+.on-dark{background:var(--g);padding:24px;border-radius:4px}
+</style></head><body>
+<div class="c">
+<section class="k"><h1 style="font-size:3rem">UI-кит МеталлПро</h1><p class="lead">Цвета, шрифты, кнопки, карточки и формы. Все стили лежат в style-pro.css.</p></section>
+
+<section class="k"><h2>Цвета</h2><div class="sw">
+<div style="background:#1E2124;color:#fff">Графит #1E2124<br>фон, текст</div>
+<div style="background:#8A9199;color:#1E2124">Сталь #8A9199<br>второстепенное</div>
+<div style="background:#F4F5F6">Светлый #F4F5F6<br>фон секций</div>
+<div style="background:#FF6B00;color:#1E2124">Оранжевый #FF6B00<br>кнопки, акценты</div></div>
+<p class="hint" style="margin-top:12px">Текст на оранжевом: графит (контраст около 5,6:1). Белый на оранжевом не используем, контраст низкий.</p></section>
+
+<section class="k"><h2>Типографика</h2>
+<p style="font:700 3.4rem var(--fh);line-height:1.1">Заголовок H1, Oswald 700</p>
+<p style="font:700 2.2rem var(--fh)">Заголовок H2, Oswald 700</p>
+<p style="font:600 1.35rem var(--fh);margin-bottom:12px">Заголовок H3, Oswald 600</p>
+<p>Основной текст, Inter 400, 16 px, интерлиньяж 1,6. Строка не длиннее 80 знаков.</p></section>
+
+<section class="k"><h2>Кнопки</h2>
+<div class="row"><a class="btn" href="#">Основная</a><a class="btn sm" href="#">Малая</a><button class="btn" disabled>Недоступна</button></div>
+<div class="on-dark row" style="margin-top:16px;color:#fff"><a class="btn" href="#">На тёмном</a><a class="btn ghost" href="#">Контурная</a></div></section>
+
+<section class="k"><h2>Карточки</h2><div class="grid c3">
+<article class="card"><div class="ph">Фото</div><div class="b"><h3>Карточка услуги</h3><p>Иконка, заголовок, описание.</p></div></article>
+<article class="card"><div class="ph">Фото</div><div class="b"><h3>Карточка изделия</h3><p class="spec">Пролёт до 36 м</p><a class="more" href="#">Запросить расчёт</a></div></article>
+<div class="stat" style="align-self:start"><b>3 000 т</b><span>Карточка-цифра</span></div></div></section>
+
+<section class="k"><h2>Формы</h2><div class="paper" style="padding:24px;border-radius:4px"><div class="panel" style="max-width:480px">
+<label>Поле ввода <input type="text" placeholder="Обычное состояние"></label>
+<label>С ошибкой <input type="text" class="err" value="Неверное значение"></label>
+<label>Список <select><option>Ангар</option><option>Ферма</option></select></label>
+<label>Файл <input type="file"></label>
+<label class="chk"><input type="checkbox"><span>Чекбокс согласия</span></label>
+<button class="btn">Отправить</button></div></div></section>
+</div></body></html>
