@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Металл, который держит слово — металлоконструкции под ключ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&family=Inter:wght@400;500;700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="style-b.css">
+</head>
+<body>
+
+  <!-- 1. HERO -->
+  <header class="hero">
+    <nav class="nav container">
+      <span class="logo">МеталлПро</span>
+      <a class="nav-phone" href="tel:+70000000000">+7 (000) 000-00-00</a>
+    </nav>
+
+    <div class="hero-inner container">
+      <div class="hero-text">
+        <h1>Металл, который держит слово</h1>
+        <p>Гаражи, навесы, заборы: делаем на своём производстве и ставим сами. Срок и цену фиксируем в договоре.</p>
+        <a href="#calc" class="btn">Рассчитать стоимость</a>
+      </div>
+
+      <!-- Декор: ферма (стальная конструкция) -->
+      <svg class="truss" viewBox="0 0 400 220" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+          <path d="M10 190 L390 190"/>
+          <path d="M10 190 L200 30 L390 190"/>
+          <path d="M105 110 L105 190 M200 30 L200 190 M295 110 L295 190"/>
+          <path d="M105 110 L200 190 L295 110"/>
+        </g>
+        <g fill="#fff">
+          <circle cx="10" cy="190" r="7"/><circle cx="390" cy="190" r="7"/>
+          <circle cx="200" cy="30" r="7"/><circle cx="105" cy="110" r="7"/>
+          <circle cx="295" cy="110" r="7"/><circle cx="200" cy="190" r="7"/>
+        </g>
+      </svg>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2. ПОЧЕМУ МЫ -->
+    <section class="section container" id="why">
+      <h2>Почему мы</h2>
+      <div class="cards">
+        <article class="card">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 42V20l12 7V20l12 7V20l12 7V8h4v34z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>
+          <h3>Своё производство</h3>
+          <p>Варим и красим в собственном цехе. Не перепродаём чужое, поэтому отвечаем за каждый шов.</p>
+        </article>
+        <article class="card">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4l16 6v12c0 10-7 18-16 22C15 40 8 32 8 22V10z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M16 24l6 6 11-12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Гарантия 5 лет</h3>
+          <p>Пять лет гарантии на конструкцию и покрытие. Условия прописаны в договоре.</p>
+        </article>
+        <article class="card">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M30 6a10 10 0 0 0-9 14L6 35l7 7 15-15a10 10 0 0 0 14-9l-7 7-6-1-1-6z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>
+          <h3>Монтаж под ключ</h3>
+          <p>Замер, доставка, установка и уборка за собой. Вам остаётся принять работу.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3. ГАЛЕРЕЯ -->
+    <section class="section gallery-section" id="gallery">
+      <div class="container">
+        <h2>Наши объекты</h2>
+        <div class="gallery">
+          <!-- Чтобы вставить фото, замените <div class="ph"> на:
+               <img src="images/foto-1.jpg" alt="Навес для авто"> -->
+          <figure><div class="ph">Фото 1</div></figure>
+          <figure><div class="ph">Фото 2</div></figure>
+          <figure><div class="ph">Фото 3</div></figure>
+          <figure><div class="ph">Фото 4</div></figure>
+          <figure><div class="ph">Фото 5</div></figure>
+          <figure><div class="ph">Фото 6</div></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. КАЛЬКУЛЯТОР -->
+    <section class="section container" id="calc">
+      <h2>Узнайте цену за минуту</h2>
+      <form class="panel" id="calc-form" novalidate>
+        <label>Что строим
+          <select id="calc-type">
+            <option>Навес</option>
+            <option>Гараж</option>
+            <option>Забор</option>
+          </select>
+        </label>
+        <div class="row">
+          <label>Длина, м
+            <input type="number" id="calc-length" min="1" step="0.1" inputmode="decimal" placeholder="6">
+          </label>
+          <label>Ширина, м
+            <input type="number" id="calc-width" min="1" step="0.1" inputmode="decimal" placeholder="4">
+          </label>
+        </div>
+        <button type="submit" class="btn">Узнать цену</button>
+        <p class="result" id="calc-result" role="status"></p>
+      </form>
+    </section>
+
+    <!-- 5. ЗАЯВКА -->
+    <section class="section order" id="order">
+      <div class="container">
+        <h2>Оставьте заявку</h2>
+        <form class="panel" id="order-form">
+          <label>Имя
+            <input type="text" name="name" required autocomplete="name" placeholder="Как к вам обращаться">
+          </label>
+          <label>Телефон
+            <input type="tel" name="phone" required autocomplete="tel" placeholder="+7 (___) ___-__-__">
+          </label>
+          <label>Комментарий
+            <textarea name="comment" rows="4" placeholder="Что нужно сделать, размеры, сроки"></textarea>
+          </label>
+          <button type="submit" class="btn">Отправить заявку</button>
+          <p class="result" id="order-result" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© МеталлПро. Металлоконструкции под ключ.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
