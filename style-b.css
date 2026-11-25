@@ -1,0 +1,55 @@
+/* ВАРИАНТ B: «Плакат». Крупный шрифт, жирные рамки, жёсткие тени */
+:root { --g:#2b2e33; --o:#f26a1b; --w:#fff; --fh:"Russo One", Impact, sans-serif; --fb:"Manrope", system-ui, sans-serif; }
+* { box-sizing: border-box; margin: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--fb); color: var(--g); background: var(--w); line-height: 1.55; }
+.wrap { width: min(1180px, 100% - 32px); margin-inline: auto; }
+:focus-visible { outline: 4px solid var(--g); outline-offset: 3px; }
+main > section { padding: 64px 0; }
+
+.hero { background: var(--o); border-bottom: 4px solid var(--g); padding-bottom: 56px; }
+.nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; font-family: var(--fh); font-size: 1.2rem; }
+.nav a { color: var(--g); text-decoration: none; font-family: var(--fb); font-weight: 800; }
+h1 { font-family: var(--fh); font-weight: 400; font-size: clamp(2.7rem, 13vw, 8.5rem); line-height: .94; text-transform: uppercase; margin: 36px 0 24px; }
+.hero p { font-size: 1.2rem; font-weight: 500; max-width: 28em; margin-bottom: 32px; }
+
+.btn { display: inline-block; background: var(--g); color: var(--w); border: 4px solid var(--g); font: 800 1.05rem var(--fb); padding: 16px 28px; text-decoration: none; cursor: pointer; box-shadow: 6px 6px 0 var(--w); transition: transform .1s, box-shadow .1s; }
+.btn:active { transform: translate(4px, 4px); box-shadow: 2px 2px 0 var(--w); }
+
+.strip { background: var(--g); color: var(--w); overflow: hidden; white-space: nowrap; font-family: var(--fh); font-size: 1.3rem; padding: 14px 0; }
+.strip span { display: inline-block; padding-left: 100%; animation: run 24s linear infinite; }
+@keyframes run { to { transform: translateX(-100%); } }
+
+h2 { font-family: var(--fh); font-weight: 400; font-size: clamp(2rem, 7vw, 3.6rem); line-height: 1; margin-bottom: 32px; text-transform: uppercase; }
+
+.rows { border-top: 4px solid var(--g); }
+.row { display: grid; grid-template-columns: auto 1fr; gap: 12px 20px; align-items: center; padding: 24px 0; border-bottom: 4px solid var(--g); }
+.row svg { width: 76px; height: 76px; padding: 14px; background: var(--o); border: 4px solid var(--g); color: var(--g); }
+.row h3 { font-family: var(--fh); font-weight: 400; font-size: 1.6rem; }
+.row p { grid-column: 1 / -1; font-size: 1.05rem; }
+
+.mosaic { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.mosaic figure { margin: 0; }
+.mosaic .ph, .mosaic img { width: 100%; aspect-ratio: 1; object-fit: cover; border: 4px solid var(--g); display: grid; place-items: center; font-family: var(--fh); color: var(--g); background: repeating-linear-gradient(135deg, #fff 0 12px, #ecedee 12px 24px); }
+
+.duo { background: var(--g); }
+.duo .wrap { display: grid; gap: 36px; }
+.panel { background: var(--w); border: 4px solid var(--w); padding: 28px; box-shadow: 8px 8px 0 var(--o); display: grid; gap: 16px; align-content: start; }
+.panel h2 { font-size: 2rem; margin-bottom: 4px; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+label { display: grid; gap: 6px; font-weight: 800; font-size: .95rem; }
+input, select, textarea { font: 500 1rem var(--fb); color: var(--g); background: var(--w); border: 3px solid var(--g); border-radius: 0; padding: 13px; width: 100%; }
+input:focus, select:focus, textarea:focus { outline: 4px solid var(--o); outline-offset: 0; }
+.panel .btn { box-shadow: 6px 6px 0 var(--o); justify-self: start; }
+.result { font-weight: 800; color: #c24a05; min-height: 1.5em; }
+.footer { background: var(--o); border-top: 4px solid var(--g); padding: 22px 0; font-weight: 800; }
+
+@media (min-width: 760px) {
+  .row { grid-template-columns: auto 1fr 1.2fr; }
+  .row p { grid-column: auto; }
+  .mosaic { grid-template-columns: repeat(4, 1fr); }
+  .mosaic figure:nth-child(1), .mosaic figure:nth-child(4) { grid-column: span 2; }
+  .mosaic figure:nth-child(1) .ph, .mosaic figure:nth-child(4) .ph { aspect-ratio: 2 / 1; }
+}
+@media (min-width: 900px) { .duo .wrap { grid-template-columns: 1fr 1fr; } }
+@media (prefers-reduced-motion: reduce) { .strip span { animation: none; padding-left: 0; } html { scroll-behavior: auto; } }

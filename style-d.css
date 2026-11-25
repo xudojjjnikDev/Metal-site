@@ -1,0 +1,55 @@
+/* ВАРИАНТ D: «Фото-журнал». Фото на весь экран, много воздуха, мягкие формы */
+:root { --g:#2b2e33; --o:#f26a1b; --w:#fff; --paper:#f3f4f5; --f:"Onest", system-ui, sans-serif; }
+* { box-sizing: border-box; margin: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--f); color: var(--g); background: var(--w); line-height: 1.6; }
+.wrap { width: min(1160px, 100% - 40px); margin-inline: auto; }
+:focus-visible { outline: 3px solid var(--o); outline-offset: 3px; }
+
+/* Чтобы поставить фото: замените весь background на url(images/hero.jpg) center/cover */
+.hero { min-height: 88vh; display: flex; flex-direction: column; color: var(--w);
+  background: linear-gradient(0deg, rgba(30,32,36,.92), rgba(30,32,36,.25)),
+              repeating-linear-gradient(45deg, #4a4f56 0 22px, #41454c 22px 44px); }
+.nav { display: flex; justify-content: space-between; align-items: center; padding: 22px 0; }
+.nav a { color: var(--w); text-decoration: none; font-weight: 700; }
+.hero-text { margin-top: auto; padding-bottom: 56px; }
+h1 { font-weight: 800; font-size: clamp(2.5rem, 9vw, 5.6rem); line-height: 1.02; letter-spacing: -.03em; max-width: 11em; margin-bottom: 18px; }
+.hero p { font-size: 1.15rem; max-width: 30em; color: #e3e5e8; margin-bottom: 28px; }
+.btn { display: inline-block; border: 0; cursor: pointer; background: var(--o); color: var(--w); font: 700 1rem var(--f); text-decoration: none; padding: 17px 30px; border-radius: 999px; }
+.btn:hover { background: #d95a10; }
+
+main > section { padding: 72px 0; }
+h2 { font-weight: 800; font-size: clamp(1.8rem, 5vw, 2.8rem); letter-spacing: -.02em; margin-bottom: 28px; }
+.why { display: grid; gap: 32px; }
+.why-item svg { width: 44px; height: 44px; color: var(--o); margin-bottom: 12px; }
+.why-item h3 { font-size: 1.35rem; margin-bottom: 6px; }
+.why-item p { color: #555a62; }
+
+.gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.gallery figure { margin: 0; }
+.gallery figure:first-child { grid-column: span 2; }
+.gallery .ph, .gallery img { width: 100%; height: 100%; min-height: 150px; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 20px; display: grid; place-items: center; color: #9aa0a6; background: repeating-linear-gradient(45deg, #e4e6e8 0 16px, #eff0f1 16px 32px); }
+
+.duo { display: grid; gap: 20px; }
+.panel { display: grid; gap: 16px; padding: 32px 26px; border-radius: 24px; }
+.light .panel { background: var(--paper); }
+.dark .panel { background: var(--g); color: var(--w); }
+.panel h2 { font-size: 1.8rem; margin-bottom: 4px; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+label { display: grid; gap: 6px; font-weight: 700; font-size: .92rem; }
+input, select, textarea { font: 400 1rem var(--f); color: var(--g); background: var(--w); border: 2px solid transparent; border-radius: 14px; padding: 14px; width: 100%; }
+input:focus, select:focus, textarea:focus { border-color: var(--o); outline: none; }
+.panel .btn { justify-self: start; }
+.result { font-weight: 700; color: #c24a05; min-height: 1.6em; }
+.dark .result { color: var(--o); }
+.footer { background: var(--g); color: #9aa0a6; padding: 26px 0; font-size: .9rem; }
+
+@media (min-width: 760px) {
+  .why { grid-template-columns: repeat(3, 1fr); gap: 0; }
+  .why-item { padding: 0 32px; border-left: 2px solid #e1e3e6; }
+  .why-item:first-child { padding-left: 0; border-left: 0; }
+  .gallery { grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .gallery figure:first-child { grid-column: span 2; grid-row: span 2; }
+  .duo { grid-template-columns: 1fr 1fr; gap: 24px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
