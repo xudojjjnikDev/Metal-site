@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>МеталлПро: металлоконструкции точно в срок и в допуск</title>
+<meta name="description" content="Проектирование, изготовление и монтаж металлоконструкций. Быстрый расчёт стоимости по чертежу.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style-eng.css">
+</head>
+<body>
+<header class="top"><div class="c">
+  <a class="logo" href="#">МеталлПро</a>
+  <nav aria-label="Разделы"><a href="#directions">Направления</a><a href="#cases">Кейсы</a><a href="#quality">Качество</a><a href="#faq">Вопросы</a></nav>
+  <a class="tel" href="tel:+70000000000">+7 (000) 000-00-00</a>
+  <a class="ic" href="https://wa.me/" aria-label="WhatsApp">WA</a>
+  <a class="ic" href="https://t.me/" aria-label="Telegram">TG</a>
+  <a class="btn" style="min-height:44px;padding:0 18px" href="#request">Заявка</a>
+</div></header>
+
+<main>
+<!-- 1. HERO, вариант A: фото + чертёжная сетка -->
+<section class="hero ha">
+  <div class="txt grid-bg" style="background-color:var(--bg)">
+    <h1>Металло&shy;конструкции. Точно в срок и в допуск</h1>
+    <p>Проектируем, изготавливаем и монтируем. Фиксируем цену и сроки в договоре, контролируем допуски на каждом этапе.</p>
+    <div class="row"><a class="btn" href="#calc">Получить расчёт</a><a class="btn line" href="#cases">Смотреть проекты</a></div>
+  </div>
+  <div class="pic" role="img" aria-label="Монтаж металлоконструкций (фото-заглушка)">
+    <svg viewBox="0 0 600 700" preserveAspectRatio="xMidYMid slice" class="dr draw" aria-hidden="true" stroke="#0B2A4A">
+      <path d="M0 175H600M0 350H600M0 525H600M150 0V700M300 0V700M450 0V700" stroke="#0B2A4A" opacity=".18"/>
+      <path d="M40 48H560M40 36V60M560 36V60M52 48l14-6M52 48l14 6M548 48l-14-6M548 48l-14 6"/>
+      <path d="M48 90V640M36 90H60M36 640H60M48 102l-6 14M48 102l6 14M48 628l-6-14M48 628l6-14"/>
+      <path d="M520 640V610H550M520 640H550"/>
+      <text x="300" y="42" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="15" stroke="none" fill="#0B2A4A" style="paint-order:stroke;stroke:#FAFAF7;stroke-width:6px">24 000</text>
+      <text x="40" y="365" font-family="IBM Plex Mono,monospace" font-size="15" stroke="none" fill="#0B2A4A" transform="rotate(-90 40 365)" text-anchor="middle" style="paint-order:stroke;stroke:#e6e9ec;stroke-width:6px">9 500</text>
+    </svg>
+  </div>
+</section>
+
+<!-- 1. HERO, вариант B (откройте страницу с ?hero=b) -->
+<section class="hero hb"><div class="c">
+  <div>
+    <h1>Металло&shy;конструкции. Точно в срок и в допуск</h1>
+    <p>Проектируем, изготавливаем и монтируем. Фиксируем цену и сроки в договоре, контролируем допуски на каждом этапе.</p>
+    <div class="row"><a class="btn" href="#calc">Получить расчёт</a><a class="btn line" href="#cases">Смотреть проекты</a></div>
+  </div>
+  <svg viewBox="0 0 600 340" class="dr draw" aria-label="Сечения профилей: двутавр, швеллер, уголок" role="img" stroke="#fff">
+    <path d="M60 40H260V72H175V228H260V260H60V228H145V72H60Z"/>
+    <path d="M300 40H400V72H330V228H400V260H300Z"/>
+    <path d="M440 40H470V228H540V260H440Z"/>
+    <path d="M40 40V260M30 40H50M30 260H50M60 290H260M60 280V300M260 280V300" stroke="#FFC400"/>
+    <g font-family="IBM Plex Mono,monospace" font-size="14" fill="#b8c4d2" stroke="none"><text x="160" y="320" text-anchor="middle">Двутавр</text><text x="350" y="320" text-anchor="middle">Швеллер</text><text x="490" y="320" text-anchor="middle">Уголок</text><text x="160" y="284" text-anchor="middle" fill="#FFC400">200</text></g>
+  </svg>
+</div></section>
+
+<!-- 2. КАЛЬКУЛЯТОР -->
+<section class="sec" id="calc"><div class="c">
+  <form class="calc" id="calc-form" novalidate data-reveal>
+    <label>Тип изделия<select><option>Ангар</option><option>Каркас здания</option><option>Ферма</option><option>Лестница</option><option>Ограждение</option><option>Нестандартное изделие</option></select></label>
+    <label>Площадь, м² или масса, т<input id="calc-size" type="number" min="1" step="0.1" inputmode="decimal" placeholder="500"></label>
+    <label>Регион<select><option>Москва и область</option><option>Санкт-Петербург и область</option><option>Другой регион РФ</option></select></label>
+    <label>Срок<select><option>До 1 месяца</option><option>1–3 месяца</option><option>3–6 месяцев</option><option>Более 6 месяцев</option></select></label>
+    <button class="btn" type="submit">Узнать ориентировочную цену</button>
+    <p class="res" id="calc-res" role="status"></p>
+  </form>
+</div></section>
+
+<!-- 3. ПОКАЗАТЕЛИ (примерные) -->
+<section class="sec blue"><div class="c nums">
+  <div class="num"><b data-count="3000">3 000</b><span>тонн металла в год</span></div>
+  <div class="num"><b data-count="480">480</b><span>реализованных объектов</span></div>
+  <div class="num"><b data-count="12">12</b><span>лет на рынке</span></div>
+  <div class="num"><b data-count="5" data-suffix=" лет">5 лет</b><span>гарантии на конструкции</span></div>
+</div></section>
+
+<!-- 4. НАПРАВЛЕНИЯ -->
+<section class="sec" id="directions"><div class="c">
+  <h2 data-reveal>Направления</h2>
+  <p class="lead" data-reveal>Наведите на плитку, чтобы увидеть пример работы.</p>
+  <div class="tiles">
+    <a class="tile" href="#request"><div class="photo"></div><svg viewBox="0 0 64 64" class="dr draw" fill="none" stroke-linejoin="round"><path d="M6 52V30Q32 4 58 30V52M6 52H58M20 52V36M44 52V36"/></svg><h3>Ангары</h3><p>Арочные и каркасные, пролёт до 36 м</p></a>
+    <a class="tile" href="#request"><div class="photo"></div><svg viewBox="0 0 64 64" class="dr draw" fill="none"><path d="M8 54V10M32 54V10M56 54V10M8 10H56M8 32H56M8 54H56"/></svg><h3>Каркасы зданий</h3><p>Склады, цеха, торговые центры</p></a>
+    <a class="tile" href="#request"><div class="photo"></div><svg viewBox="0 0 64 64" class="dr draw" fill="none" stroke-linejoin="round"><path d="M6 50H58M6 50L32 14L58 50M19 32V50M45 32V50M19 32L32 50L45 32"/></svg><h3>Фермы</h3><p>Стропильные и подстропильные</p></a>
+    <a class="tile" href="#request"><div class="photo"></div><svg viewBox="0 0 64 64" class="dr draw" fill="none" stroke-linejoin="round"><path d="M8 54H20V42H32V30H44V18H56"/></svg><h3>Лестницы</h3><p>Маршевые, винтовые, пожарные</p></a>
+    <a class="tile" href="#request"><div class="photo"></div><svg viewBox="0 0 64 64" class="dr draw" fill="none"><path d="M10 54V20M32 54V20M54 54V20M6 20H58M6 34H58"/></svg><h3>Ограждения</h3><p>Кровли, лестниц, территорий</p></a>
+    <a class="tile" href="#request"><div class="photo"></div><svg viewBox="0 0 64 64" class="dr draw" fill="none"><path d="M14 12H50M14 52H50M32 12V52"/></svg><h3>Нестандартные изделия</h3><p>По вашему чертежу или ТЗ</p></a>
+  </div>
+</div></section>
+
+<!-- 5. ТАЙМЛАЙН -->
+<section class="sec blue"><div class="c">
+  <h2 data-reveal>Как мы работаем</h2>
+  <p class="lead" data-reveal>Семь шагов от заявки до сдачи объекта.</p>
+  <ol class="tl" style="--line:#3d5a7a">
+    <li><small>01</small><h3>Заявка</h3><p>Расчёт по чертежу или ТЗ</p></li>
+    <li><small>02</small><h3>Замеры</h3><p>Выезд инженера на объект</p></li>
+    <li><small>03</small><h3>Проект</h3><p>КМ и КМД, согласование</p></li>
+    <li><small>04</small><h3>Производство</h3><p>Изготовление и контроль ОТК</p></li>
+    <li><small>05</small><h3>Доставка</h3><p>По графику на площадку</p></li>
+    <li><small>06</small><h3>Монтаж</h3><p>Собственные бригады</p></li>
+    <li><small>07</small><h3>Сдача</h3><p>Документация и гарантия</p></li>
+  </ol>
+</div></section>
+<style>.blue .tl small,.blue .tl p{color:#b8c4d2}.blue .tl li::before{border-color:#fff}</style>
+
+<!-- 6. КЕЙСЫ (данные примерные) -->
+<section class="sec" id="cases"><div class="c">
+  <h2 data-reveal>Кейсы</h2>
+  <p class="lead" data-reveal>Паспорт каждого объекта: площадь, масса металла, срок, город.</p>
+  <div class="cards c3">
+    <article class="case" data-reveal><div class="ba"><div class="ph">До</div><div class="ph">После</div></div><div class="b"><h3>Производственный ангар</h3>
+      <dl class="pass"><div><dt>Площадь</dt><dd>2 400 м²</dd></div><div><dt>Масса</dt><dd>180 т</dd></div><div><dt>Срок</dt><dd>3 мес.</dd></div><div><dt>Город</dt><dd>Тверь</dd></div></dl></div></article>
+    <article class="case" data-reveal><div class="ba"><div class="ph">До</div><div class="ph">После</div></div><div class="b"><h3>Складской комплекс</h3>
+      <dl class="pass"><div><dt>Площадь</dt><dd>6 000 м²</dd></div><div><dt>Масса</dt><dd>420 т</dd></div><div><dt>Срок</dt><dd>5 мес.</dd></div><div><dt>Город</dt><dd>Казань</dd></div></dl></div></article>
+    <article class="case" data-reveal><div class="ba"><div class="ph">До</div><div class="ph">После</div></div><div class="b"><h3>Торговый центр</h3>
+      <dl class="pass"><div><dt>Площадь</dt><dd>3 800 м²</dd></div><div><dt>Масса</dt><dd>260 т</dd></div><div><dt>Срок</dt><dd>4 мес.</dd></div><div><dt>Город</dt><dd>Самара</dd></div></dl></div></article>
+  </div>
+</div></section>
+
+<!-- 7. ПРОИЗВОДСТВО И КАЧЕСТВО -->
+<section class="sec blue" id="quality"><div class="c split">
+  <div data-reveal>
+    <h2>Производство и качество</h2>
+    <p class="lead">Контроль на каждом этапе: от входного металла до окраски.</p>
+    <ul class="qa">
+      <li><b>ОТК на каждом этапе</b><span>Входной контроль металла, проверка швов и геометрии</span></li>
+      <li><b>ГОСТ 23118-2019</b><span>Конструкции стальные строительные</span></li>
+      <li><b>Допуск СРО</b><span>Номер и дату вставьте</span></li>
+      <li><b>Аттестация сварщиков</b><span>Удостоверения и протоколы (НАКС)</span></li>
+    </ul>
+  </div>
+  <div class="g2" data-reveal><div class="ph">Оборудование</div><div class="ph">Цех</div><div class="ph">ОТК</div><div class="ph">Сертификаты</div></div>
+</div></section>
+
+<!-- 8. КЛИЕНТЫ И ОТЗЫВЫ (примерные) -->
+<section class="sec"><div class="c">
+  <h2 data-reveal>Клиенты и отзывы</h2>
+  <div class="logos" style="margin-top:32px"><div>Логотип</div><div>Логотип</div><div>Логотип</div><div>Логотип</div><div>Логотип</div><div>Логотип</div></div>
+  <div class="cards c3">
+    <blockquote data-reveal><p>Ангар сдали в срок, к документации вопросов не было.</p><cite>Иван П., объект «Производственный ангар», Тверь</cite></blockquote>
+    <blockquote data-reveal><p>Нестандартную ферму посчитали по чертежу быстрее остальных.</p><cite>Сергей К., объект «Складской комплекс», Казань</cite></blockquote>
+    <blockquote data-reveal><p>Один подрядчик на проект и монтаж, работать стало проще.</p><cite>Алексей М., объект «Торговый центр», Самара</cite></blockquote>
+  </div>
+</div></section>
+
+<!-- 9. FAQ -->
+<section class="sec paper" id="faq" style="background:#fff"><div class="c" style="max-width:900px">
+  <h2 data-reveal>Частые вопросы</h2>
+  <details><summary>Какие сроки изготовления и монтажа?</summary><p>Зависят от массы и сложности. Типовой ангар до 2 000 м² мы делаем за 2–3 месяца. Точный срок фиксируем в договоре.</p></details>
+  <details><summary>Как проходит оплата?</summary><p>Обычно поэтапно: аванс, оплата после изготовления, остаток после монтажа. Схему согласуем в договоре.</p></details>
+  <details><summary>Какая гарантия?</summary><p>5 лет на конструкции и покрытие. Условия прописаны в договоре.</p></details>
+  <details><summary>Как организована доставка?</summary><p>Доставляем собственным или партнёрским транспортом на площадку по согласованному графику.</p></details>
+  <details><summary>Какая антикоррозийная защита?</summary><p>Подбираем под условия эксплуатации: грунт-эмаль, горячее цинкование или огнезащитные составы.</p></details>
+</div></section>
+
+<!-- 10. ЗАЯВКА -->
+<section class="sec blue" id="request"><div class="c split">
+  <div data-reveal>
+    <h2>Получить расчёт стоимости</h2>
+    <p class="lead">Загрузите чертёж или опишите задачу. Инженер посчитает смету.</p>
+    <p class="promise">Ответим за 30 минут в рабочее время</p>
+  </div>
+  <form class="panel" id="request-form" novalidate data-reveal>
+    <label>Имя<input type="text" name="name" required autocomplete="name"></label>
+    <label>Телефон<input type="tel" name="phone" required autocomplete="tel" placeholder="+7 (___) ___-__-__"></label>
+    <label>Чертёж или ТЗ <span class="hint">PDF, DWG, DXF, JPG, ZIP</span><input type="file" name="file" accept=".pdf,.dwg,.dxf,.jpg,.jpeg,.png,.zip"></label>
+    <fieldset class="msg"><legend>Где вам ответить</legend>
+      <label><input type="radio" name="via" value="wa" checked>WhatsApp</label>
+      <label><input type="radio" name="via" value="tg">Telegram</label>
+      <label><input type="radio" name="via" value="tel">Звонок</label></fieldset>
+    <label>Комментарий<textarea name="comment" rows="3" placeholder="Тип изделия, размеры, сроки, город"></textarea></label>
+    <label class="chk"><input type="checkbox" name="consent"><span>Согласен на обработку персональных данных (<a href="#">политика конфиденциальности</a>)</span></label>
+    <button class="btn" type="submit">Получить расчёт</button>
+    <p class="res" id="request-res" role="status"></p>
+  </form>
+</div></section>
+</main>
+
+<!-- 11. ФУТЕР -->
+<footer class="foot"><div class="c">
+  <div class="cols">
+    <div><h3>Контакты</h3><p><a href="tel:+70000000000">+7 (000) 000-00-00</a><br><a href="mailto:info@example.ru">info@example.ru</a><br>Пн–Пт, 9:00–18:00<br><a href="https://wa.me/">WhatsApp</a> · <a href="https://t.me/">Telegram</a></p></div>
+    <div><h3>Реквизиты</h3><p>ООО «МеталлПро»<br>ИНН 0000000000<br>ОГРН 0000000000000</p></div>
+    <div><h3>Документы</h3><p><a href="#">Политика конфиденциальности</a><br><a href="#">Карточка предприятия</a><br><a href="#">Сертификаты</a></p></div>
+    <div><h3>Производство</h3><!-- Карта: вставьте код Яндекс.Карт вместо блока --><div class="ph">Карта: г. Город, ул. Заводская, 1</div></div>
+  </div>
+  <p class="copy mono">© МеталлПро. Все права защищены.</p>
+</div></footer>
+
+<div class="bar"><a class="btn line" href="tel:+70000000000">Позвонить</a><a class="btn" href="#calc">Рассчитать</a></div>
+<script src="script-eng.js"></script>
+</body>
+</html>
